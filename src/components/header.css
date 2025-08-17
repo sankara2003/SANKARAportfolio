@@ -1,0 +1,10 @@
+.dynamic-logo {
+  transition: all 0.3s ease-in-out;
+  font-size: 1.6rem;
+  color: #2575fc;
+  font-weight: bold;
+}
+.header.scrolled .dynamic-logo {
+  font-size: 1.1rem;
+  color: #6a11cb;
+}

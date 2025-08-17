@@ -1,0 +1,85 @@
+/* Hero.css */
+body.dark-mode {
+  background-color: #1c1c1c;
+  color: white;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 1rem;
+  position: relative;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #888;
+  margin-bottom: 1.5rem;
+}
+
+.social-icons a {
+  margin: 0 0.5rem;
+  font-size: 1.8rem;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #0072b1;
+}
+
+.skills-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem 0;
+  gap: 1rem;
+}
+
+.skill-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.cta-button {
+  padding: 0.8rem 2rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+.status-banner {
+  margin-top: 2rem;
+  font-weight: bold;
+  background-color: #e0ffe0;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}

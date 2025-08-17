@@ -1,0 +1,66 @@
+
+.footer {
+  position: relative;
+  background-color: #0f172a; /* slate-900 */
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 10;
+}
+
+.footer-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.footer-subtitle {
+  color: #94a3b8; /* slate-400 */
+  font-size: 14px;
+}
+
+/* Background elements */
+.background-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.mountain {
+  position: absolute;
+  bottom: 0;
+  clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+  background-color: #475569; /* slate-600 */
+  opacity: 0.3;
+}
+
+.mountain-1 {
+  left: 40px;
+  width: 120px;
+  height: 60px;
+}
+
+.mountain-2 {
+  right: 40px;
+  width: 100px;
+  height: 50px;
+  background-color: #334155; /* darker mountain */
+  opacity: 0.2;
+}
+
+.star {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.8;
+}
