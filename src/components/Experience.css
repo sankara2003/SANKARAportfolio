@@ -1,7 +1,7 @@
 /* Experience Section Styles */
 
 .experience-wrapper {
-  min-height: 150vh;
+  min-height: 200vh;
   background: linear-gradient(135deg, #870000 0%, #190A05 50%, #870000 100%);
   position: relative;
   overflow: hidden;
