@@ -1,11 +1,8 @@
-import React, { useRef, useEffect } from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import React from "react";
+import { motion } from "framer-motion";
+// import "./skills.css";
 
 const Skills = () => {
-  const sliderRef = useRef(null);
-
   const skillCategories = [
     {
       title: "Frontend Development",
@@ -15,17 +12,17 @@ const Skills = () => {
         { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
         { name: "ReactJS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
         { name: "Bootstrap", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" },
-        { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" }
+        { name: "Tailwind CSS", icon: "https://static.cdnlogo.com/logos/t/58/tailwindcss.svg" }
       ]
     },
     {
       title: "UI/UX Design",
       skills: [
-        { name: "UI Design" },
-        { name: "UX Design" },
-        { name: "Prototyping" },
+        { name: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
         { name: "Wireframing" },
-        { name: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" }
+        { name: "Prototyping" },
+        { name: "UI Design" },
+        { name: "UX Design" }
       ]
     },
     {
@@ -34,109 +31,64 @@ const Skills = () => {
         { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
         { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
         { name: "GitLab", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" },
-        { name: "NPM/Yarn", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" },
+        { name: "NPM", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" },
         { name: "Postman", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" }
       ]
     },
     {
-      title: "API & Integration",
-      skills: [
-        { name: "RESTful APIs" },
-        { name: "Axios" },
-        { name: "Fetch API" }
-      ]
-    },
-    {
-      title: "Additional Tools",
-      skills: [
-        { name: "Moodle" },
-        { name: "Nextcloud" },
-        { name: "QGIS" },
-        { name: "Appsmith" }
-      ]
-    },
-    {
-      title: "Familiar Technologies",
+      title: "Familiar Tech",
       skills: [
         { name: "PHP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
+        { name: "NodeJS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
         { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
-        { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
-        { name: "NodeJS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" }
+        { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" }
       ]
     }
   ];
 
-  const settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 768, // mobile view
-        settings: {
-          slidesToShow: 1
-        }
-      }
-    ]
-  };
-
-  // Mouse scroll wheel handler
-  useEffect(() => {
-    const handleWheel = (event) => {
-      if (!sliderRef.current) return;
-
-      event.preventDefault();
-      if (event.deltaY > 0) {
-        sliderRef.current.slickNext();
-      } else {
-        sliderRef.current.slickPrev();
-      }
-    };
-
-    const sliderElement = document.querySelector('.slick-slider');
-
-    if (sliderElement) {
-      sliderElement.addEventListener('wheel', handleWheel, { passive: false });
-    }
-
-    return () => {
-      if (sliderElement) {
-        sliderElement.removeEventListener('wheel', handleWheel);
-      }
-    };
-  }, []);
-
   return (
-    <section id="skills" className="section" aria-label="Skills and Technologies">
-      <div className="container">
-        <h2 className="section-title animate-on-scroll">Skills & Technologies</h2>
-        <Slider ref={sliderRef} {...settings}>
-          {skillCategories.map((category, index) => (
-            <div key={index} className="skill-slide">
-              <div className="skill-category" role="region" aria-labelledby={`category-${index}`}>
-                <h4 id={`category-${index}`}>{category.title}</h4>
-                <div className="skill-tags">
-                  {category.skills.map((skill, skillIndex) => (
-                    <span key={skillIndex} className="skill-tag" title={skill.name}>
-                      {skill.icon && (
-                        <img
-                          src={skill.icon}
-                          alt={`${skill.name} icon`}
-                          className="skill-icon"
-                          loading="lazy"
-                          aria-hidden="true"
-                        />
-                      )}
-                      {skill.name}
-                    </span>
-                  ))}
-                </div>
-              </div>
+    <section id="skills" className="skills-section">
+      <motion.h2
+        className="skills-title"
+        initial={{ opacity: 0, y: -40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        Skills & Technologies
+      </motion.h2>
+      <p className="skills-subtitle">
+        My toolbox of <strong>tech & design</strong> that powers digital products.
+      </p>
+
+      <div className="skills-grid">
+        {skillCategories.map((category, i) => (
+          <motion.div
+            key={i}
+            className="skill-card"
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.2, duration: 0.6 }}
+            whileHover={{ scale: 1.05, rotateX: 5, rotateY: -5 }}
+          >
+            <h3 className="skill-category-title">{category.title}</h3>
+            <div className="skill-items">
+              {category.skills.map((skill, idx) => (
+                <motion.div
+                  key={idx}
+                  className="skill-item"
+                  whileHover={{ scale: 1.15 }}
+                  transition={{ type: "spring", stiffness: 200 }}
+                >
+                  {skill.icon && (
+                    <img src={skill.icon} alt={skill.name} className="skill-item-icon" />
+                  )}
+                  <span>{skill.name}</span>
+                </motion.div>
+              ))}
             </div>
-          ))}
-        </Slider>
+          </motion.div>
+        ))}
       </div>
     </section>
   );

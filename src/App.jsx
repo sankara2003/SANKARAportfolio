@@ -58,8 +58,9 @@ function App() {
         <Hero scrollToSection={scrollToSection} />
         <About />
         <Skills />
+          <Projects />
         <Experience />
-        <Projects />
+      
         <Footer />
       </div>
     </ThemeProvider>

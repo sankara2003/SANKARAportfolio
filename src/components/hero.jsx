@@ -102,7 +102,7 @@ const Hero = ({ scrollToSection }) => {
   };
 
   return (
-    <div className={`hero-wrapper ${darkMode ? "dark-mode" : "light-mode"}`}>
+    <div id="home" className={`hero-wrapper ${darkMode ? "dark-mode" : "light-mode"}`}>
       <style jsx>{`
         .skill-icon-container1 {
           position: relative;
@@ -144,7 +144,7 @@ const Hero = ({ scrollToSection }) => {
         }
 
         .light-mode {
-          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          background: linear-gradient(135deg, #8E0E00 0%, #1F1C18 100%);
           color: #333;
         }
 
@@ -160,21 +160,7 @@ const Hero = ({ scrollToSection }) => {
           left: 0;
           right: 0;
           bottom: 0;
-          background: radial-gradient(
-              circle at 20% 80%,
-              rgba(120, 119, 198, 0.3) 0%,
-              transparent 50%
-            ),
-            radial-gradient(
-              circle at 80% 20%,
-              rgba(255, 119, 198, 0.3) 0%,
-              transparent 50%
-            ),
-            radial-gradient(
-              circle at 40% 40%,
-              rgba(120, 219, 255, 0.2) 0%,
-              transparent 50%
-            );
+          
           pointer-events: none;
         }
 
@@ -227,7 +213,7 @@ const Hero = ({ scrollToSection }) => {
 
         .cursor {
           animation: blink 1s infinite;
-          color: #ff6b6b;
+          color: #fff;
         }
 
         @keyframes blink {
@@ -242,6 +228,7 @@ const Hero = ({ scrollToSection }) => {
         }
 
         .subtitle {
+        color: white;
           font-size: 1.4rem;
           margin-bottom: 2rem;
           opacity: 0.8;

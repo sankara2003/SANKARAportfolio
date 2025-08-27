@@ -1,0 +1,121 @@
+/* Section */
+.section {
+  padding: 4rem 1rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-decoration-color : linear-gradient(135deg, #8E0E00, #1F1C18); 
+      /* background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)); */
+
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* Project Card */
+.project-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* Image */
+.project-image img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #e5e7eb;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.03);
+}
+
+/* Header */
+.project-header {
+  padding: 1rem 1.2rem 0 1.2rem;
+}
+
+.project-header h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  color: #8E0E00;
+}
+
+.project-header p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-top: 0.3rem;
+}
+
+/* Content */
+.project-content {
+  padding: 0.5rem 1.2rem 1rem 1.2rem;
+  flex: 1;
+}
+
+.project-content p {
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* Tech Tags */
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  background: #ffffff;
+  color: #8E0E00;
+  font-size: 0.75rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  font-weight: 500;
+    border: 1px solid #8E0E00;
+
+}
+
+/* Actions */
+.project-actions {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 1.2rem 1.5rem 1.2rem;
+}
+
+.project-actions a {
+  flex: 1;
+  text-align: center;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  background: #2563eb;
+  transition: background 0.3s ease;
+}
+
+.project-actions a:hover {
+  background: #1e40af;
+}
