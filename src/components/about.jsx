@@ -39,7 +39,7 @@ const About = () => {
                 <Phone size={20} />
                 +91 6374870684
               </a>
-              <a href="https://linkedin.com/in/sankara-subramanian" className="contact-item" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/sankara-subramanian-s-288196216" className="contact-item" target="_blank" rel="noopener noreferrer">
                 <Linkedin size={20} />
                 LinkedIn Profile
               </a>

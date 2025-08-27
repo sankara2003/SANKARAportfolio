@@ -546,7 +546,7 @@ const Hero = ({ scrollToSection }) => {
 
           <div className="social-icons">
             <a
-              href="https://github.com/"
+              href="https://github.com/sankara2003/"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon"
@@ -562,7 +562,7 @@ const Hero = ({ scrollToSection }) => {
               </svg>
             </a>
             <a
-              href="https://linkedin.com/"
+              href="https://www.linkedin.com/in/sankara-subramanian-s-288196216"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon"
